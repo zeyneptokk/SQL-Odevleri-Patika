@@ -12,3 +12,10 @@ Soru 3)customer tablosunda bulunan store_id değerlerine karşılık gelen müş
 SELECT store_id, COUNT(customer_id) AS customer_count
 FROM customer
 GROUP BY store_id
+
+Soru 4)city tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıran country_id bilgisini ve şehir sayısını paylaşınız.
+SELECT country_id, COUNT(city)
+FROM city
+GROUP BY country_id
+ORDER BY COUNT DESC
+LIMIT 1
